@@ -13,10 +13,10 @@
 </script>
 <script>
 
-    window.addEventListener("W2A", onReceivedPostMessage, false);
+    window.addEventListener("message", onReceivedPostMessage, false);
 
     function postMessageToiOS(postData) {
-        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+        window.webkit.messageHandlers.W2A.postMessage(postData);
     }
 
     var element_layer = document.getElementById('layer');
